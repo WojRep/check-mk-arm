@@ -28,7 +28,7 @@ This build is tested on Raspberry Pi 1 and 3, even though it runs on the first e
 
 ### Edit DEB package
 
-mkdir tmp
-dpkg-deb -R original.deb tmp
-#edit file
-dpkg-deb -b tmp fixed.deb
+ mkdir tmp
+ dpkg-deb -R original.deb tmp
+ #edit file
+ dpkg-deb -b tmp fixed.deb
