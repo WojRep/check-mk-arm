@@ -24,3 +24,11 @@ This build is tested on Raspberry Pi 1 and 3, even though it runs on the first e
     -            OPTI="--enable-optimizations" ; \
     +            OPTI="" ; \
     diff -u omd/packages/python/Makefile omd/packages/python/Makefile_v2 > ../python-Makefile-disable-optimization.patch
+
+
+### Edit DEB package
+
+mkdir tmp
+dpkg-deb -R original.deb tmp
+# edit file
+dpkg-deb -b tmp fixed.deb
